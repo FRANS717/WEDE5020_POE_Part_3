@@ -25,20 +25,20 @@ The site includes the following features:
 
 maria-essentials-website/
 │
-├── index.html # Homepage with hero banner & slideshow
-├── about.html # About us information
-├── enquires.html # Enquiries / customer feedback form
-├── contact.html # Contact information + Google Maps
-├── services.html # List of services + service form
-├── gallery.html # Full product gallery with Lightbox
-├── shop.html # Product shop with filters + Add to Cart
-├── cart.html # Shopping cart summary + Delivery button
-├── delivery.html # Delivery form for checkout
+├── index.html  Homepage with hero banner & slideshow
+├── about.html  About us information
+├── enquires.html  Enquiries / customer feedback form
+├── contact.html  Contact information + Google Maps
+├── services.html  List of services + service form
+├── gallery.html  Full product gallery with Lightbox
+├── shop.html  Product shop with filters + Add to Cart
+├── cart.html  Shopping cart summary + Delivery button
+├── delivery.html  Delivery form for checkout
 │
-├── styles.css # Main responsive style file
-├── script.js # Hamburger menu, cart, filters, slideshow
+├── styles.css  Main responsive style file
+├── script.js  Hamburger menu, cart, filters, slideshow
 │
-└── assets/ # All website images and media
+└── assets/ All website images and media
 ---
 
 
@@ -100,7 +100,7 @@ maria-essentials-website/
 ## 🧩 How to Use / Setup Guide
 
  **1. Download or Clone the Project**
-
+https://github.com/FRANS717/WEDE5020_POE_Part_3.git
 
  **2. Open the Folder in Visual Studio Code**
 - Right-click → **Open with Code**
