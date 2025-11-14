@@ -142,6 +142,50 @@ Navigation bar resizing
 
 Touch-friendly gallery
 
+# Maria Essentials Website – Changelog
+
+## Version 1.0.0 – Initial Release
+### Added
+- Home page with slideshow and hero section  
+- About Us page with mission and vision  
+- Responsive navigation bar with icons  
+- Weather, date, time auto-detection in navbar  
+- Enquiries page with fully working form  
+- Contact page with Google Maps embed  
+- Services page with form   
+- Gallery page with Lightbox effect and category sections  
+- Shop page with all product categories  
+- JS shopping cart using localStorage  
+- Product filter system by category  
+- Delivery page with order submission  
+- Adaptive full responsive layout (mobile, tablet, desktop)  
+- Hamburger menu for mobile view  
+- Auto-refreshing slideshow with external image links  
+- Grid system for gallery and shop  
+    
+
+ Improved
+- Navigation bar rewritten for responsiveness  
+- CSS consolidated for faster loading  
+- Product display standardized  
+- Improved cart layout and remove button function  
+- Cleaned unused code and optimized selectors  
+
+ Fixed
+- Gallery image alignment  
+- Hamburger menu not showing on About page  
+- Weather API not loading (IP-based fallback added)  
+- Navigation links alignment issues on small screens  
+
+---
+
+Version 1.1.0 – Upcoming Features (Planned)
+- Side-sliding mobile menu  
+- Animated menu transitions  
+- Full checkout with payment options  
+- User account login system  
+
+
 
 
 
