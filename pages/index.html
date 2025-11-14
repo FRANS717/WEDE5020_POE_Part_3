@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Home</title>
+  <link rel="stylesheet" href="styles.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  
+</head>
+
+
+<script>
+// --- CLOCK (Date & Time) ---
+function updateClock() {
+  const now = new Date();
+  const options = { weekday: 'long', year: 'numeric', month: 'short', day: 'numeric' };
+  const date = now.toLocaleDateString(undefined, options);
+  const time = now.toLocaleTimeString();
+  document.getElementById("clock").textContent = `${date} | ${time}`;
+}
+setInterval(updateClock, 1000);
+updateClock();
+
+// --- WEATHER & CITY (IP-Based) ---
+async function fetchWeatherAndCity() {
+  const apiKey = "1cdddb1c793a44e41470ca39634973d8"; // OpenWeather API key
+
+  try {
+    //  user's city by IP
+    const ipResponse = await fetch("https://ipapi.co/json/");
+    const ipData = await ipResponse.json();
+    const lat = ipData.latitude;
+    const lon = ipData.longitude;
+    const city = ipData.city;
+
+    //  weather from OpenWeather
+    const weatherURL = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}&units=metric`;
+    const weatherResponse = await fetch(weatherURL);
+    const weatherData = await weatherResponse.json();
+
+    const temp = weatherData.main.temp.toFixed(1);
+    const desc = weatherData.weather[0].description;
+    const iconCode = weatherData.weather[0].icon;
+    const iconURL = `https://openweathermap.org/img/wn/${iconCode}.png`;
+
+    // Step 3: Display results
+    document.getElementById("weather").innerHTML = `
+      <img src="${iconURL}" alt="${desc}" style="vertical-align:middle; width:25px; height:25px;">
+      ${city} | ${temp}°C | ${desc}
+    `;
+  } catch (error) {
+    document.getElementById("weather").textContent = "Weather unavailable";
+    console.error(error);
+  }
+}
+
+
+fetchWeatherAndCity();
+</script>
+
+<body>
+  <nav>
+  
+      <!-- Navigation Links -->
+    
+<a href="index.html" class="active"><i class="fas fa-home"></i></a>      <!-- Home -->
+<a href="about.html"><i class="fas fa-user"></i></a>                    <!-- About -->
+<a href="enquires.html"><i class="fas fa-question-circle"></i></a>      <!-- Enquiries -->
+<a href="contact.html"><i class="fas fa-phone-alt"></i></a>             <!-- Contact -->
+<a href="services.html"><i class="fas fa-cogs"></i></a>                 <!-- Services -->
+<a href="gallery.html"><i class="fas fa-image"></i></a>               <!-- Gallery -->
+<a href="shop.html"><i class="fas fa-shopping-bag"></i></a>          <!-- Shop -->
+<a href="cart.html"><i class="fas fa-shopping-cart"></i></a>        <!-- Cart -->
+  </nav>
+   <nav>
+  <div id="clock" style="color:white; margin-right:15px;"></div>
+  <div id="weather" style="color:lightblue;"></div>
+</nav>
+  <section class="hero">
+          
+            <h1>Welcome to Maria Essentials</h1>
+            <p>Your one-stop shop for beauty, skincare, and personal care essentials.</p>
+       
+  </section>
+
+  <section>
+    <h2>Discover Our Collection</h2>
+    <p>
+      At <strong>Maria Essentials</strong>, we bring you a wide range of high-quality products designed to help you feel confident and beautiful every day.  
+      From luxurious perfumes and nourishing lotions to vibrant lipsticks and skincare must-haves, we’ve got everything you need.
+    </p>
+  </section>
+
+  <section>
+    <h2>Why Choose Us?</h2>
+    <ul>
+      <li>🌸 Quality products sourced with care</li>
+      <li>💎 Affordable prices without compromise</li>
+      <li>🚚 Fast and reliable delivery</li>
+      <li>🤝 Customer satisfaction is our priority</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Shop With Confidence</h2>
+    <p>
+      Whether you’re looking for the perfect fragrance, skincare solution, or beauty essential,  
+      our online store makes it easy to browse, order, and enjoy.  
+      STAY TUNED for our upcoming promotions and new arrivals!
+      
+      
+    </p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Maria Essentials. All rights reserved.</p>
+    </footer>
+</body>
+</html>
