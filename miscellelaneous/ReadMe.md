@@ -20,7 +20,7 @@ The site includes the following features:
 - Fully responsive gallery with Lightbox pop-ups  
 - User enquiry and contact pages  
 - External online images, animated slideshows  
--   
+  
 
 ---
 
