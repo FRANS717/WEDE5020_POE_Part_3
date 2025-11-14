@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Home</title>
+  <link rel="stylesheet" href="styles.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+</head>
+<body>
+<nav>
+   <a href="../index.html" class="active"><i class="fas fa-home"></i></a>      <!-- Home -->
+<a href="../pages/about.html"><i class="fas fa-user"></i></a>                    <!-- About -->
+<a href="../pages/enquires.html"><i class="fas fa-question-circle"></i></a>      <!-- Enquiries -->
+<a href="../pages/contact.html"><i class="fas fa-phone-alt"></i></a>             <!-- Contact -->
+<a href="../pages/services.html"><i class="fas fa-cogs"></i></a>                 <!-- Services -->
+<a href="../pages/gallery.html"><i class="fas fa-image"></i></a>               <!-- Gallery -->
+<a href="../pages/shop.html"><i class="fas fa-shopping-bag"></i></a>          <!-- Shop -->
+<a href="../pages/cart.html"><i class="fas fa-shopping-cart"></i></a>        <!-- Cart -->
+  </nav>
+<main>
+    <img src="../assets/home_page.jpeg " alt="Maria Essentials Home" class="home-image">
+    <h1>Product / Service Enquiry</h1>
+    <section>
+    <h2>Enquire With Us</h2>
+    <p>
+      Have questions or special requests? Fill out the form below, and our team will respond quickly to assist you.
+    </p>
+  </section>
+    <form>
+      <label>Name:</label><br>
+      <input type="text" name="name" required><br><br>
+
+      <label>Email:</label><br>
+      <input type="email" name="email" required><br><br>
+
+      <label>Enquiry Type:</label><br>
+      <select name="type">
+        <option value="product">Product</option>
+        <option value="service">Service</option>
+        <option value="volunteer">Volunteer</option>
+        <option value="sponsor">Sponsor</option>
+      </select><br><br>
+
+      <label>Message:</label><br>
+      <textarea rows="5" name="message"></textarea><br><br>
+
+      <button type="submit">Submit Enquiry</button>
+    </form>
+   
+  </main>
+   <footer>
+        <p>&copy; 2025 Maria Essentials. All rights reserved.</p>
+    </footer>
+    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfJmWvtZq27ga8xDFB_Bq3x6cweYYX2ITKO_-EgfP8Su9kGeQ/viewform?embedded=true" width="640" height="1331" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+</body>
+</html>
