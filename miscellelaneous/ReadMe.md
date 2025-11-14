@@ -113,6 +113,34 @@ Right-click `index.html` → **Open with Live Server**
 All images must stay inside the `/assets` folder.  
 Styles and scripts must be linked like this:
 
+🌐 Browser Support
+
+| Browser         | Supported           |
+| --------------- | ------------------- |
+| Chrome          |  Full support     |
+| Firefox         |  Full support     |
+| Edge            |  Full support     |
+| Safari          |  Full support     |
+| Opera           |  Full support     |
+| Mobile Browsers |  Fully responsive |
+
+📱 Responsive Features
+
+The website includes:
+
+Mobile hamburger menu
+
+Tablet + desktop layout changes
+
+Adaptive fonts and grids
+
+Responsive images
+
+Flexible product grid
+
+Navigation bar resizing
+
+Touch-friendly gallery
 
 
 
