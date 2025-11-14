@@ -21,7 +21,7 @@ The site includes the following features:
 - User enquiry and contact pages  
 - External online images, animated slideshows  
   
-## 📁 Project Structure
+ 📁 Project Structure
 
 maria-essentials-website/
 │
