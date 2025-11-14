@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Home</title>
+  <link rel="stylesheet" href="./css/styles.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  
+</head>
+
+
+<script>
+// --- CLOCK (Date & Time) ---
+function updateClock() {
+  const now = new Date();
+  const options = { weekday: 'long', year: 'numeric', month: 'short', day: 'numeric' };
+  const date = now.toLocaleDateString(undefined, options);
+  const time = now.toLocaleTimeString();
+  document.getElementById("clock").textContent = `${date} | ${time}`;
+}
+setInterval(updateClock, 1000);
+updateClock();
+
+// --- WEATHER & CITY (IP-Based) ---
+async function fetchWeatherAndCity() {
+  const apiKey = "1cdddb1c793a44e41470ca39634973d8"; // OpenWeather API key
+
+  try {
+    //  user's city by IP
+    const ipResponse = await fetch("https://ipapi.co/json/");
+    const ipData = await ipResponse.json();
+    const lat = ipData.latitude;
+    const lon = ipData.longitude;
+    const city = ipData.city;
+
+    //  weather from OpenWeather
+    const weatherURL = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}&units=metric`;
+    const weatherResponse = await fetch(weatherURL);
+    const weatherData = await weatherResponse.json();
+
+    const temp = weatherData.main.temp.toFixed(1);
+    const desc = weatherData.weather[0].description;
+    const iconCode = weatherData.weather[0].icon;
+    const iconURL = `https://openweathermap.org/img/wn/${iconCode}.png`;
+
+    // Step 3: Display results
+    document.getElementById("weather").innerHTML = `
+      <img src="${iconURL}" alt="${desc}" style="vertical-align:middle; width:25px; height:25px;">
+      ${city} | ${temp}°C | ${desc}
+    `;
+  } catch (error) {
+    document.getElementById("weather").textContent = "Weather unavailable";
+    console.error(error);
+  }
+}
+
+
+fetchWeatherAndCity();
+</script>
+
+<body>
+  <nav>
+  
+      <!-- Navigation Links -->
+    
+   <a href="index.html" class="active"><i class="fas fa-home"></i></a>      <!-- Home -->
+<a href="../pages/about.html"><i class="fas fa-user"></i></a>                    <!-- About -->
+<a href="../pages/enquires.html"><i class="fas fa-question-circle"></i></a>      <!-- Enquiries -->
+<a href="../pages/contact.html"><i class="fas fa-phone-alt"></i></a>             <!-- Contact -->
+<a href="../pages/services.html"><i class="fas fa-cogs"></i></a>                 <!-- Services -->
+<a href="../pages/gallery.html"><i class="fas fa-image"></i></a>               <!-- Gallery -->
+<a href="../pages/shop.html"><i class="fas fa-shopping-bag"></i></a>          <!-- Shop -->
+<a href="../pages/cart.html"><i class="fas fa-shopping-cart"></i></a>        <!-- Cart -->
+  </nav>
+   <nav>
+  <div id="clock" style="color:white; margin-right:15px;"></div>
+  <div id="weather" style="color:lightblue;"></div>
+</nav>
+  <section class="hero">
+          
+            <h1>Welcome to Maria Essentials</h1>
+            <p>Your one-stop shop for beauty, skincare, and personal care essentials.</p>
+       
+  </section>
+
+  <section>
+    <h2>Discover Our Collection</h2>
+    <p>
+      At <strong>Maria Essentials</strong>, we bring you a wide range of high-quality products designed to help you feel confident and beautiful every day.  
+      From luxurious perfumes and nourishing lotions to vibrant lipsticks and skincare must-haves, we’ve got everything you need.
+    </p>
+  </section>
+
+  <section>
+    <h2>Why Choose Us?</h2>
+    <ul>
+      <li>🌸 Quality products sourced with care</li>
+      <li>💎 Affordable prices without compromise</li>
+      <li>🚚 Fast and reliable delivery</li>
+      <li>🤝 Customer satisfaction is our priority</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Shop With Confidence</h2>
+    <p>
+      Whether you’re looking for the perfect fragrance, skincare solution, or beauty essential,  
+      our online store makes it easy to browse, order, and enjoy.  
+      STAY TUNED for our upcoming promotions and new arrivals!
+      
+      
+    </p>
+        </section>
+        <section class="features">
+  <h2>Why Choose Maria Essentials?</h2>
+  <div class="feature-grid">
+    <div class="feature-box">
+      <i class="fas fa-flask"></i>
+      <h3>Scientifically Formulated</h3>
+      <p>Our skincare products are crafted with advanced, clinically researched ingredients.</p>
+    </div>
+
+    <div class="feature-box">
+      <i class="fas fa-leaf"></i>
+      <h3>Natural & Safe</h3>
+      <p>We use gentle, skin-friendly ingredients suitable for all skin types.</p>
+    </div>
+
+    <div class="feature-box">
+      <i class="fas fa-hand-holding-heart"></i>
+      <h3>Trusted Quality</h3>
+      <p>Every product meets high standards to give you the best results every day.</p>
+    </div>
+  </div>
+</section>
+<section class="product-highlights">
+  <h2>Explore Our Beauty Essentials</h2>
+  <div class="highlight-grid">
+    <div class="highlight">
+      <img src="assets/perfume 1.webp" alt="Perfumes">
+      <h3>Perfumes</h3>
+      <p>Long-lasting, luxurious fragrances that elevate your presence.</p>
+    </div>
+
+    <div class="highlight">
+      <img src="assets/skin 1.webp" alt="Skincare">
+      <h3>Skincare</h3>
+      <p>Glow-boosting formulas designed for smooth, healthy, radiant skin.</p>
+    </div>
+
+    <div class="highlight">
+      <img src="assets/lotion 2.webp" alt="Body Care">
+      <h3>Body Care</h3>
+      <p>Hydrating lotions and oils that nourish and protect your skin daily.</p>
+    </div>
+  </div>
+</section>
+<section class="testimonials">
+  <h2>What Our Customers Say</h2>
+
+  <div class="testimonial-box">
+    <p>"Maria Essentials transformed my skincare routine. My skin has never looked this good!”</p>
+    <h4>— Thandi M.</h4>
+  </div>
+
+  <div class="testimonial-box">
+    <p>"The perfumes are long-lasting and elegant. I always get compliments!”</p>
+    <h4>— Lerato K.</h4>
+  </div>
+
+  <div class="testimonial-box">
+    <p>"Professional, quick delivery, and excellent service every time."</p>
+    <h4>— Amanda S.</h4>
+  </div>
+</section>
+<section class="quick-shop">
+  <h2>Shop By Category</h2>
+  <div class="shop-buttons">
+    <a href="./assets/perfume 1.webp">Perfumes</a>
+    <a href="./assets/lotion 2.webp">Lotions</a>
+    <a href="./assets/skin 1.webp">Skincare</a>
+    <a href="./assets/haircare 1.webp">Hair Care</a>
+    <a href="./assets/mascara 4.jpeg">Makeup</a>
+    <h2> And many more in our Gallery Section</h2>
+  </div>
+</section>
+<section class="cta">
+  <h2>Join the Maria Essentials Family</h2>
+  <p>Get access to exclusive discounts, new products, and monthly beauty tips.</p>
+  <a href="pages/enquires.html" class="cta-button">Send Us an Enquiry</a>
+</section>
+
+<section class="delivery-info">
+  <h2>Fast Delivery Nationwide</h2>
+  <p>Shop from anywhere in South Africa and enjoy swift doorstep delivery.</p>
+
+  <div class="benefits">
+    <p><i class="fas fa-truck"></i> Reliable delivery</p>
+    <p><i class="fas fa-credit-card"></i> Simple and secure ordering</p>
+    <p><i class="fas fa-star"></i> Top-rated customer service</p>
+  </div>
+</section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Maria Essentials. All rights reserved.</p>
+    </footer>
+</body>
+</html>

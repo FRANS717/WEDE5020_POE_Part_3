@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Delivery Details</title>
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+  <nav>
+    <a href="../index.html"><i class="fas fa-home"></i></a>
+    <a href="../pages/shop.html"><i class="fas fa-shopping-bag"></i></a>
+    <a href="../pages/cart.html"><i class="fas fa-shopping-cart"></i></a>
+  </nav>
+
+  <main>
+    <h1>Delivery Information</h1>
+    
+
+    <form id="delivery-form">
+      <label>Full Name:</label><br>
+      <input type="text" id="name" required><br><br>
+
+      <label>Delivery Address:</label><br>
+      <textarea id="address" rows="3" required></textarea><br><br>
+
+      <label>Phone Number:</label><br>
+      <input type="tel" id="phone" required><br><br>
+
+      <!-- Display Total -->
+      <p id="order-total" style="font-weight: bold; color: rgb(0, 0, 0); font-size: 1.2em;"></p>
+
+      <button type="submit">Confirm Delivery</button>
+    </form>
+  </main>
+
+  <script>
+    // Load cart total
+    function loadTotal() {
+      const total = localStorage.getItem('cartTotal');
+      if (total) {
+        document.getElementById('order-total').textContent = "Total to Pay: R" + total;
+      }
+    }
+
+    // Load saved delivery info
+    function loadSavedInfo() {
+      document.getElementById('name').value = localStorage.getItem('deliveryName') || "";
+      document.getElementById('address').value = localStorage.getItem('deliveryAddress') || "";
+      document.getElementById('phone').value = localStorage.getItem('deliveryPhone') || "";
+    }
+
+    // Save delivery info on form submit
+    document.getElementById('delivery-form').addEventListener('submit', function(e) {
+      e.preventDefault(); // stop form from reloading the page
+
+      const name = document.getElementById('name').value;
+      const address = document.getElementById('address').value;
+      const phone = document.getElementById('phone').value;
+
+      // Save to localStorage
+      localStorage.setItem('deliveryName', name);
+      localStorage.setItem('deliveryAddress', address);
+      localStorage.setItem('deliveryPhone', phone);
+
+      alert("✅ Delivery details saved successfully!\nThank you for shopping with Maria Essentials.");
+
+      // Optionally redirect to a confirmation page
+      // window.location.href = "thankyou.html";
+    });
+
+    // Run when page loads
+    window.onload = function() {
+      loadTotal();
+      loadSavedInfo();
+    };
+  </script>
+</body>
+</html>
