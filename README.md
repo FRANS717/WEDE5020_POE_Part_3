@@ -1,1 +1,1 @@
-[![Netlify Status](https://api.netlify.com/api/v1/badges/ce417322-e75c-4c36-88a9-b75398a18a7c/deploy-status)](https://app.netlify.com/projects/radiant-kitten-99b4e7/deploys)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/755ccdb2-1836-4fd0-bd62-e4f640ff4a63/deploy-status)](https://app.netlify.com/projects/mariaessential/deploys)
