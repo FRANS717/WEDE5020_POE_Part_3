@@ -1,0 +1,482 @@
+#clock {
+  margin-left: auto;     /* pushes it to the right */
+  color: gold;           /* matches your nav style */
+  font-size: 1em;
+  font-weight: bold;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f4f4f4;
+  text-align: center;
+}
+
+nav {
+  background: #333;
+  padding: 1em;
+  display: flex;
+  justify-content: center;
+  gap: 2em;
+}
+
+nav a {
+  color: white;
+  font-size: 1.5em;
+  text-decoration: none;
+  transition: color 0.3s, transform 0.3s;
+}
+
+nav a:hover,
+
+nav a.active {
+  color: gold;
+  transform: scale(1.2);
+
+}
+
+main {
+  padding: 2em;
+}
+shop-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 1em;
+  padding: 2em;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.product {
+  background: white;
+  border: 1px solid #ddd;
+  padding: 1em;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 0.95em;
+}
+.filters {
+  margin-top: 1em;
+  display: flex;
+  justify-content: center;
+  gap: 1em;
+  flex-wrap: wrap;
+}
+
+.filters button {
+  padding: 0.5em 1em;
+  border: none;
+  background-color: #333;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.filters button:hover {
+  background-color: gold;
+}
+
+#cart-count {
+  font-size: 0.8em;
+  background: red;
+  color: white;
+  padding: 2px 6px;
+  border-radius: 50%;
+  vertical-align: top;
+}
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1em;
+  justify-content: center;
+  padding: 1em 0;
+}
+
+.gallery img {
+  width: 160px;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+main section {
+  margin-bottom: 2em;
+}
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1em;
+  justify-content: center;
+  padding: 1em 0;
+}
+
+.gallery img {
+  width: 160px;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  lighting-color: aqua;
+}
+.inuka-banner {
+    text-align: center;
+    padding: 20px;
+    background-color: #f9f9f9;
+}
+
+.inuka-banner img {
+    max-width: 300px;
+    height: auto;
+}
+
+.inuka-text h2 {
+    font-family: 'Georgia', serif;
+    font-size: 24px;
+    margin-top: 10px;
+}
+
+.inuka-text h3 {
+    font-weight: bold;
+    margin: 5px 0;
+}
+
+.inuka-text p {
+    font-size: 14px;
+    color: #555;
+}
+
+/*  Responsive Design  */
+
+/* Tablets */
+@media (max-width: 1024px) {
+  nav {
+    gap: 1em;
+  }
+  .gallery img {
+    max-width: 120px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .shop-grid {
+    grid-template-columns: 1fr; /* single column */
+  }
+  .gallery img {
+    max-width: 100%;
+  }
+  body {
+    font-size: 0.9rem; /* smaller font */
+  }
+}
+#delivery-btn {
+  display: block;
+  margin: 20px auto;
+  background-color: gold;
+  color: black;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 24px;
+  cursor: pointer;
+  font-size: 1em;
+  transition: background-color 0.3s;
+}
+
+#delivery-btn:hover {
+  background-color: #1E90FF; /* light blue hover color */
+  color: white;
+}
+#clock, #weather {
+  font-size: 0.95rem;
+  display: inline-block;
+  color: white;
+  text-align: center;
+  margin: 0 10px;
+}
+
+#weather img {
+  margin-right: 5px;
+  vertical-align: middle;
+}
+/* ===== NAVIGATION BAR ===== */
+nav {
+  background-color: #000;
+  color: white;
+  padding: 10px 20px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  border-bottom: 2px solid lightblue;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.logo {
+  font-size: 1.2em;
+  font-weight: bold;
+  color: gold;
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links a {
+  color: lightblue;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1em;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: gold;
+}
+
+/* ===== HAMBURGER ICON ===== */
+.menu-toggle {
+  display: none;
+  font-size: 1.8em;
+  color: white;
+  cursor: pointer;
+}
+
+/* ===== CLOCK AND WEATHER ===== */
+#clock, #weather {
+  font-size: 0.85rem;
+  color: white;
+  margin-top: 5px;
+  text-align: center;
+}
+
+#weather {
+  color: #1ec0ff;
+}
+
+/* ===== RESPONSIVE MENU ===== */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: #111;
+    border-top: 1px solid #222;
+    margin-top: 10px;
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+
+  .nav-links a {
+    padding: 10px 0;
+    text-align: center;
+    border-bottom: 1px solid #222;
+  }
+}
+/* ===== ABOUT PAGE STYLES ===== */
+.about-container {
+  max-width: 1200px;       /* limits width on large screens */
+  margin: 0 auto;           /* centers container */
+  padding: 40px 20px;       /* spacing around content */
+  box-sizing: border-box;
+}
+
+/* About page headings */
+.about-container h1,
+.about-container h2 {
+  text-align: center;
+  color: #222;
+  margin-bottom: 20px;
+}
+
+/* About page paragraphs */
+.about-container p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #444;
+  margin-bottom: 20px;
+  text-align: justify;
+}
+
+/* Sections: image + text */
+.about-section {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+/* Images inside sections */
+.about-section img {
+  max-width: 50%;       /* half the section width on desktop */
+  height: auto;
+  border-radius: 8px;
+}
+
+/* Text block inside section */
+.about-section .text {
+  flex: 1;              /* takes remaining space */
+}
+
+/* ===== MEDIA QUERIES ===== */
+@media (max-width: 1024px) {
+  .about-container {
+    padding: 30px 15px;
+  }
+
+  .about-section {
+    gap: 20px;
+  }
+
+  .about-section img {
+    max-width: 45%;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-container {
+    padding: 20px 10px;
+  }
+
+  .about-container h1 {
+    font-size: 1.8rem;
+  }
+
+  .about-container h2 {
+    font-size: 1.5rem;
+  }
+
+  .about-container p {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+
+  .about-section {
+    flex-direction: column;  /* stack image + text */
+    text-align: center;
+  }
+
+  .about-section img {
+    max-width: 100%;
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-container {
+    padding: 15px 10px;
+  }
+
+  .about-container h1 {
+    font-size: 1.5rem;
+  }
+
+  .about-container h2 {
+    font-size: 1.2rem;
+  }
+
+  .about-container p {
+    font-size: 0.95rem;
+  }
+}
+/* ===== GALLERY STYLING ===== */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.gallery img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+/* Hover Zoom Effect */
+.gallery a:hover img {
+  transform: scale(1.1);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+/* Section Titles */
+section h2 {
+  text-align: center;
+  margin: 20px 0 10px;
+  font-size: 1.8em;
+  color: #333;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .gallery {
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 10px;
+  }
+
+  section h2 {
+    font-size: 1.5em;
+  }
+}
+
+@media (max-width: 480px) {
+  .gallery {
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 8px;
+  }
+
+  section h2 {
+    font-size: 1.2em;
+  }
+}
+/* ===== SLIDESHOW ===== */
+.slideshow-container {
+  position: relative;
+  max-width: 800px;
+  margin: 20px auto;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+.slideshow-container img {
+  width: 100%;
+  display: block;
+  cursor: pointer;
+  transition: transform 0.5s ease;
+}
+
+.slideshow-container img:hover {
+  transform: scale(1.05);
+}
+
+.slideshow h2 {
+  text-align: center;
+  margin-bottom: 15px;
+  font-size: 2em;
+  color: #444;
+}
+
+

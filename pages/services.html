@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact</title>
+  <link rel="stylesheet" href="styles.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+</head>
+<body>
+  <script>
+document.querySelectorAll(".faq-question").forEach(btn => {
+  btn.addEventListener("click", () => {
+    const faq = btn.parentElement;
+
+    // CLOSE others
+    document.querySelectorAll(".faq-item").forEach(item => {
+      if (item !== faq) item.classList.remove("active");
+    });
+
+    // TOGGLE this one
+    faq.classList.toggle("active");
+  });
+});
+</script>
+
+  <nav>
+   <a href="../index.html" class="active"><i class="fas fa-home"></i></a>      <!-- Home -->
+<a href="about.html"><i class="fas fa-user"></i></a>                    <!-- About -->
+<a href="enquires.html"><i class="fas fa-question-circle"></i></a>      <!-- Enquiries -->
+<a href="contact.html"><i class="fas fa-phone-alt"></i></a>             <!-- Contact -->
+<a href="services.html"><i class="fas fa-cogs"></i></a>                 <!-- Services -->
+<a href="gallery.html"><i class="fas fa-image"></i></a>               <!-- Gallery -->
+<a href="shop.html"><i class="fas fa-shopping-bag"></i></a>          <!-- Shop -->
+<a href="cart.html"><i class="fas fa-shopping-cart"></i></a>        <!-- Cart -->
+  </nav>
+  
+<main>
+   <section class="service-section">
+  <h2>Skincare Consultations</h2>
+  <p>Struggling with dryness, hyperpigmentation, acne, or uneven skin tone? Our expert skincare assessment helps you choose the right products for your skin type and skin concerns. We guide you step-by-step in building a powerful skincare routine.</p>
+  <ul class="service-list">
+    <li>Skin analysis and personalized recommendations</li>
+    <li>Anti-aging and glow-boosting solutions</li>
+    <li>Treatment options for acne and dark marks</li>
+    <li>Safe products for sensitive skin</li>
+  </ul>
+</section>
+<section class="service-section">
+  <h2>Beauty & Makeup Assistance</h2>
+  <p>Enhance your natural beauty with our high-quality makeup products and professional guidance. We help you choose the right shades, tones, and combinations that complement your unique features.</p>
+
+  <ul class="service-list">
+    <li>Lipstick & lip gloss color matching</li>
+    <li>Eyeliner & mascara selection</li>
+    <li>Everyday natural makeup recommendations</li>
+    <li>Special-occasion beauty kits</li>
+  </ul>
+</section>
+<section class="service-section">
+  <h2>Skincare Consultations</h2>
+  <p>Struggling with dryness, hyperpigmentation, acne, or uneven skin tone? Our expert skincare assessment helps you choose the right products for your skin type and skin concerns. We guide you step-by-step in building a powerful skincare routine.</p>
+
+  <ul class="service-list">
+    <li>Skin analysis and personalized recommendations</li>
+    <li>Anti-aging and glow-boosting solutions</li>
+    <li>Treatment options for acne and dark marks</li>
+    <li>Safe products for sensitive skin</li>
+  </ul>
+</section>
+<section class="service-section">
+  <h2>Body Care & Wellness Support</h2>
+  <p>Feel confident in your skin with our nourishing body care products. From hydrating lotions to healing tissue oils, we provide recommendations that improve skin texture and softness.</p>
+
+  <ul class="service-list">
+    <li>Hand & body lotion recommendations</li>
+    <li>Tissue oil for stretch marks & scars</li>
+    <li>Natural body fragrance combinations</li>
+    <li>Daily routine guidance for full-body care</li>
+  </ul>
+</section>
+<section class="service-section">
+  <h2>Hair Care Advice</h2>
+  <p>Let us help you maintain healthier, stronger, and more beautiful hair. Our hair care range includes products suitable for natural, relaxed, braided, and protective styles.</p>
+
+  <ul class="service-list">
+    <li>Moisturizing hair products</li>
+    <li>Scalp treatment suggestions</li>
+    <li>Hair growth support routines</li>
+    <li>Damage repair solutions</li>
+  </ul>
+</section>
+<section class="service-section">
+  <h2>Perfume & Fragrance Matching</h2>
+  <p>Choosing the right fragrance is personal. We’ll help you discover long-lasting perfumes that match your mood, lifestyle, and personality.</p>
+
+  <ul class="service-list">
+    <li>Long-lasting daily fragrances</li>
+    <li>Luxury event perfumes</li>
+    <li>Soft & elegant feminine scents</li>
+    <li>Bold & powerful signature scents</li>
+  </ul>
+</section>
+<section class="service-section">
+  <h2>Custom Gift Packages</h2>
+  <p>Looking for the perfect gift? We create beautiful, personalized product bundles for any occasion — birthdays, anniversaries, graduations, or self-care boxes.</p>
+
+  <ul class="service-list">
+    <li>Skincare gift sets</li>
+    <li>Perfume bundles</li>
+    <li>Mixed beauty collections</li>
+    <li>Special occasion packaging</li>
+  </ul>
+</section>
+<section class="service-cta">
+  <h2>Need Help Choosing the Right Products?</h2>
+  <p>We’re here to assist you! Fill out the form below and we’ll get back to you with personalized recommendations tailored to your needs.</p>
+  <a href="#service-form" class="cta-button">Request a Service</a>
+  
+</section>
+<section class="faq-section">
+  <h2>Frequently Asked Questions (FAQ)</h2>
+
+  <div class="faq-item">
+    <button class="faq-question">
+      How do I know which product is right for my skin?
+      <i class="fas fa-chevron-down"></i>
+    </button>
+    <div class="faq-answer">
+      <p>We offer free skincare guidance based on your skin type and concerns.</p>
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-question">
+      Do you offer delivery?
+      <i class="fas fa-chevron-down"></i>
+    </button>
+    <div class="faq-answer">
+      <p>Yes, we deliver nationwide in South Africa within 2–4 days.</p>
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-question">
+      Are your products safe for sensitive skin?
+      <i class="fas fa-chevron-down"></i>
+    </button>
+    <div class="faq-answer">
+      <p>All products are dermatologically tested and safe for sensitive skin.</p>
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-question">
+      Can I customize a gift bundle?
+      <i class="fas fa-chevron-down"></i>
+    </button>
+    <div class="faq-answer">
+      <p>Yes, you can customize any gift bundle for any occasion.</p>
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-question">
+      How do I book a consultation?
+      <i class="fas fa-chevron-down"></i>
+    </button>
+    <div class="faq-answer">
+      <p>Simply fill in the service form and our team will contact you with available dates.</p>
+    </div>
+  </div>
+</section>
+
+ 
+</section>
+
+<!-- SUCCESS POPUP -->
+<div id="success-popup" class="success-popup">
+  <div class="popup-box">
+    <h3>✔ Request Sent Successfully</h3>
+    <p>Thank you! We will contact you shortly.</p>
+    <button onclick="closePopup()">OK</button>
+  </div>
+</div>
+
+<!-- SERVICE REQUEST FORM -->
+<section id="service-form" class="service-form-section">
+  <h2>Request a Service</h2>
+
+  <form method="POST" data-netlify="true" name="serviceRequest" id="serviceRequest">
+
+    <label>Full Name</label>
+    <input type="text" name="name" id="name" required />
+
+    <label>Email Address</label>
+    <input type="email" name="email" id="email" required />
+
+    <label>Phone Number</label>
+    <input type="tel" name="phone" id="phone" required />
+
+    <label>Select a Service</label>
+    <select name="service_type" id="service_type" required>
+      <option value="">-- Select Service --</option>
+      <option value="Skincare Consultation">Skincare Consultation</option>
+      <option value="Product Recommendation">Product Recommendation</option>
+      <option value="Gift Package Creation">Gift Package Creation</option>
+      <option value="Bulk Order / Event Supply">Bulk Order / Event Supply</option>
+      <option value="Delivery Request">Delivery Request</option>
+    </select>
+
+    <label>Preferred Date</label>
+    <input type="date" name="date" id="date" required />
+
+    <label>Message</label>
+    <textarea name="message" id="message" rows="4"></textarea>
+
+    <button type="submit" class="submit-button">Submit Request</button>
+
+  </form>
+  <script>
+// CLOSE POPUP
+function closePopup() {
+  document.getElementById("success-popup").style.display = "none";
+}
+
+// VALIDATION FUNCTION
+function validateForm() {
+  let valid = true;
+
+  // fields
+  const fields = ["name", "email", "phone", "service_type", "date"];
+  
+  fields.forEach(id => {
+    const field = document.getElementById(id);
+
+    if (!field.value.trim()) {
+      field.classList.add("error");
+      valid = false;
+    } else {
+      field.classList.remove("error");
+    }
+  });
+
+  // Email format check
+  const email = document.getElementById("email");
+  const emailPattern = /^[^@\s]+@[^@\s]+\.[^@\s]+$/;
+
+  if (!emailPattern.test(email.value)) {
+    email.classList.add("error");
+    valid = false;
+  }
+
+  return valid;
+}
+
+// FORM SUBMIT
+document.getElementById("serviceRequest").addEventListener("submit", function(e) {
+  e.preventDefault(); // stop default
+
+  if (!validateForm()) {
+    alert("⚠ Please fill in all required fields correctly.");
+    return;
+  }
+
+  // For Netlify to work, we must POST manually:
+  const formData = new FormData(this);
+
+  fetch("/", {
+    method: "POST",
+    body: formData
+  })
+  .then(() => {
+    document.getElementById("success-popup").style.display = "flex";
+    document.getElementById("serviceRequest").reset();
+  })
+  .catch(() => alert("Something went wrong. Try again."));
+});
+</script>
+
+</section>
+
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Maria Essentials. All rights reserved.</p>
+  </footer>
+
+  <script src="scripts.js"></script>
+</body>
+</html>
