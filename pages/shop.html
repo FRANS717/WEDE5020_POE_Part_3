@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  
+  <!-- SEO Title -->
+  <title>Shop | INUKA Natural Skin Care & Makeup Products</title>
+
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="Browse and purchase INUKA's natural skin care, perfumes, lotions, lip gloss, mascara, sunscreen, hair care, and nail polish products. Quality beauty backed by science.">
+  <meta name="keywords" content="INUKA, natural skincare, perfumes, lotions, makeup, lip gloss, mascara, sunscreen, hair care, nail polish, shop, beauty products">
+  <meta name="author" content="INUKA Beauty">
+
+  <link rel="stylesheet" href="styles.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+</head>
+<body>
+  <nav>
+    <a href="../index.html" class="active"><i class="fas fa-home"></i></a>
+    <a href="../pages/about.html"><i class="fas fa-user"></i></a>
+    <a href="../pages/enquires.html"><i class="fas fa-question-circle"></i></a>
+    <a href="../pages/contact.html"><i class="fas fa-phone-alt"></i></a>
+    <a href="../pages/services.html"><i class="fas fa-cogs"></i></a>
+    <a href="../pages/gallery.html"><i class="fas fa-image"></i></a>
+    <a href="../pages/shop.html"><i class="fas fa-shopping-bag"></i></a>
+    <a href="../pages/cart.html"><i class="fas fa-shopping-cart"></i></a>
+     <div class="filters">
+      <input type="text" id="search-input" placeholder="Search products..." onkeyup="searchProducts()">
+  </nav>
+
+  <main>
+    <!-- INUKA Banner -->
+    <section class="inuka-banner">
+      <img src="../assets/home_page.jpeg" alt="INUKA Banner">
+      <div class="inuka-text">
+        <h2>Natural <span style="color: green;">Beautiful</span> Skin Care</h2>
+        <h3>Skin Care Backed by Science</h3>
+        <p>Uniquely formulated & developed for INUKA</p>
+      </div>
+    </section>
+
+    <h1>Shop</h1>
+    <p>Browse and purchase our products...</p>
+
+    <!-- Search Bar -->
+   
+
+      <div class="shop-grid" id="product-list">
+        <!-- Product cards -->
+        <div class="product" data-category="fragrance" data-name="Perfume" data-price="350">
+          <img src="../assets/perfume 1.webp" alt="Perfume">
+          <h3>Perfume</h3>
+          <p>R350</p>
+          <button onclick="addToCart(this)">Add to Cart</button>
+        </div>
+        <div class="product" data-category="skincare" data-name="Lotions" data-price="180">
+          <img src="../assets/lotion 2.webp" alt="Lotions">
+          <h3>Lotions</h3>
+          <p>R180</p>
+          <button onclick="addToCart(this)">Add to Cart</button>
+        </div>
+        <div class="product" data-category="makeup" data-name="Lip Gloss" data-price="95">
+          <img src="../assets/lipgloss 4.webp" alt="Lip Gloss">
+          <h3>Lip Gloss</h3>
+          <p>R95</p>
+          <button onclick="addToCart(this)">Add to Cart</button>
+        </div>
+        <div class="product" data-category="makeup" data-name="Mascara" data-price="150">
+          <img src="../assets/mascara 1.webp" alt="Mascara">
+          <h3>Mascara</h3>
+          <p>R150</p>
+          <button onclick="addToCart(this)">Add to Cart</button>
+        </div>
+        <div class="product" data-category="skincare" data-name="Hand Sanitizing Jell" data-price="60">
+          <img src="../assets/sanitizer.webp" alt="Hand Sanitizing Jell">
+          <h3>Hand Sanitizing Jell</h3>
+          <p>R60</p>
+          <button onclick="addToCart(this)">Add to Cart</button>
+        </div>
+        <div class="product" data-category="skincare" data-name="Hair Care" data-price="200">
+          <img src="../assets/haircare 3.webp" alt="Hair Care">
+          <h3>Hair Care</h3>
+          <p>R200</p>
+          <button onclick="addToCart(this)">Add to Cart</button>
+        </div>
+        <div class="product" data-category="skincare" data-name="Skin Clearing" data-price="220">
+          <img src="../assets/skin clearing 1.webp" alt="Skin Clearing">
+          <h3>Skin Clearing</h3>
+          <p>R220</p>
+          <button onclick="addToCart(this)">Add to Cart</button>
+        </div>
+        <div class="product" data-category="skincare" data-name="Tissue Oil" data-price="110">
+          <img src="../assets/tissue oil 1.webp" alt="Tissue Oil">
+          <h3>Tissue Oil</h3>
+          <p>R110</p>
+          <button onclick="addToCart(this)">Add to Cart</button>
+        </div>
+        <div class="product" data-category="skincare" data-name="Hand & Body Lotion" data-price="140">
+          <img src="../assets/hand and body lotion 1.webp" alt="Hand & Body Lotion">
+          <h3>Hand & Body Lotion</h3>
+          <p>R140</p>
+          <button onclick="addToCart(this)">Add to Cart</button>
+        </div>
+        <div class="product" data-category="makeup" data-name="Pencil & Eyeliner" data-price="75">
+          <img src="../assets/eye_liner 1.webp" alt="Pencil & Eyeliner">
+          <h3>Pencil & Eyeliner</h3>
+          <p>R75</p>
+          <button onclick="addToCart(this)">Add to Cart</button>
+        </div>
+        <div class="product" data-category="skincare" data-name="Sunscreen" data-price="190">
+          <img src="../assets/sunscreen 1.webp" alt="Sunscreen">
+          <h3>Sunscreen</h3>
+          <p>R190</p>
+          <button onclick="addToCart(this)">Add to Cart</button>
+        </div>
+        <div class="product" data-category="makeup" data-name="Nail Polish" data-price="80">
+          <img src="../assets/nail polish 1.webp" alt="Nail Polish">
+          <h3>Nail Polish</h3>
+          <p>R80</p>
+          <button onclick="addToCart(this)">Add to Cart</button>
+        </div>
+         <div class="product" data-category="skincare" data-name="Lotions" data-price="180">
+          <img src="../assets/lotion 5.webp" alt="Lotions">
+          <h3>Lotions</h3>
+          <p>R180</p>
+          <button onclick="addToCart(this)">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="cart">
+      <h2>Shopping Cart</h2>
+      <ul id="cart-items"></ul>
+      <h3 id="cart-total">Total: R0.00</h3>
+      <button onclick="clearCart()">Clear Cart</button>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+  <script>
+    // Search Function
+    function searchProducts() {
+      const input = document.getElementById('search-input').value.toLowerCase();
+      const products = document.querySelectorAll('.product');
+
+      products.forEach(product => {
+        const name = product.dataset.name.toLowerCase();
+        const category = product.dataset.category.toLowerCase();
+
+        if (name.includes(input) || category.includes(input)) {
+          product.style.display = "block";
+        } else {
+          product.style.display = "none";
+        }
+      });
+    }
+  </script>
+</body>
+</html>
