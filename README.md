@@ -1,1 +1,1 @@
-[![Netlify Status](https://api.netlify.com/api/v1/badges/755ccdb2-1836-4fd0-bd62-e4f640ff4a63/deploy-status)](https://app.netlify.com/projects/mariaessential/deploys)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/1fa9e2e6-9539-4454-938f-4391c9d6191a/deploy-status)](https://app.netlify.com/projects/mariaessentials/deploys)
