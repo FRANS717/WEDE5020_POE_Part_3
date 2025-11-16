@@ -186,6 +186,39 @@ Version 1.1.0 – Upcoming Features (Planned)
 - User account login system  
 
 
+# Changelog
+
+All notable changes to this project will be documented in this file.
+
+## [1.1.0] - 2025-11-16
+### Added
+- Implemented full **gallery page** with sections for Skincare, Perfumes, Lotions, Lip Gloss, Mascara, Hair Care, Skin Clearing, Tissue Oil, Hand & Body Lotion, Eyeliner, Sunscreen, and Nail Polish.
+- Added **lightbox functionality** for all images to enable zoom and slideshow viewing.
+- Implemented **slideshow feature** for the featured collection.
+- Added **SEO meta tags** including:
+  - `title`
+  - `description`
+  - `keywords`
+  - `robots`
+  - `canonical`
+- Added **Open Graph meta tags** for better social sharing.
+- Added **lazy loading** to all images for performance improvement.
+- Added **Font Awesome icons** for navigation menu.
+
+### Fixed
+- Corrected image filenames and paths to ensure all images load properly.
+- Fixed slideshow image rotation and timing.
+
+### Changed
+- Updated navigation links to point to correct page paths.
+- Improved semantic HTML structure for accessibility and SEO.
+- Updated `<alt>` attributes for images to improve SEO.
+
+### Removed
+- Removed duplicate or incorrect image references in gallery sections.
+
+## [1.0.0] - 2025-11-10
+- Initial project setup with basic HTML structure and placeholder images.
 
 
 
