@@ -142,7 +142,7 @@ Navigation bar resizing
 
 Touch-friendly gallery
 
-# Maria Essentials Website – Changelog
+# Maria Essentials Website – Changelog/Notice of Feedback
 
 ## Version 1.0.0 – Initial Release
 ### Added
@@ -169,7 +169,7 @@ Touch-friendly gallery
 - CSS consolidated for faster loading  
 - Product display standardized  
 - Improved cart layout and remove button function  
-- Cleaned unused code and optimized selectors  
+- fixed About Page Not being responsivr 
 
  Fixed
 - Gallery image alignment  
